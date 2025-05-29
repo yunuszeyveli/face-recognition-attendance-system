@@ -10,7 +10,7 @@ def get_attendance():
     records = []
     for record in attendance_collection.find({}, {"_id": 0}):
         # Burada name = models/emre.jpg gibi
-        record["image"] = record["name"]  # 👈 name alanını image olarak da gönderiyoruz
+        record["image"] = record["name"]  #  name alanını image olarak da gönderiyoruz
         records.append(record)
     return records
 
