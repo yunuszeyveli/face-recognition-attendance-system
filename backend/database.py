@@ -20,7 +20,7 @@ def save_attendance(name):
     if last_entry:
         last_time = datetime.strptime(last_entry["timestamp"], "%Y-%m-%d %H:%M:%S")
 
-        # Eğer kişi son 5 dakika içinde kaydedildiyse, yeni kayıt ekleme
+        # Eğer kişi son 5 dakika içinde kaydedildiyse,  yeni kayıt ekleme
         if current_time - last_time < timedelta(minutes=5):
             print(f"Skipping duplicate entry for {name}")
             return
